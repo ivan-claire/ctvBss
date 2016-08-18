@@ -1,0 +1,43 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+#labels {
+	
+	-fx-fill : #DC143C;
+	-fx-font-weight: bold;
+    -fx-font-size:12px;
+}
+
+
+#description {
+    -fx-font: 100px Tahoma;
+    -fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, #DC143C 0%, #DC143C 50%);
+    -fx-stroke: white;
+    -fx-stroke-width: 1;
+    -fx-font-weight: bold;
+    -fx-font-size:15px;
+    }
+    
+#subdescription  {
+    
+    -fx-stroke-width: 1;
+ 
+    -fx-font-size:15px;
+    }
+
+
+
+
+
+#addSubs {
+    -fx-background-color:
+        linear-gradient(#6495ed, #4169e1),
+        radial-gradient(center 50% -40%, radius 200%, #6495ed 45%, #6495ed 50%);
+    -fx-background-radius: 0, 0;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font: 14px Tahoma;
+}
+

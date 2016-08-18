@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewController">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="51.0" prefWidth="645.0" HBox.hgrow="ALWAYS">
+               <children>
+               
+                  <Label fx:id="description"  text="Subscriber's Info" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </StackPane.margin>
+                  </Label>
+                  
+               </children>
+               <HBox.margin>
+                  <Insets bottom="150.0" />
+               </HBox.margin>
+            </StackPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="-145.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   
+   <center>
+      <ScrollPane prefViewportHeight="732.0" prefViewportWidth="645.0">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <StackPane alignment="TOP_LEFT" prefHeight="715.0" prefWidth="571.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Separator prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="2.0" right="-150.0" top="115.0" />
+                           </StackPane.margin>
+                        </Separator>
+                        
+                        <Separator prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="5.0" right="-150.0" top="185.0" />
+                           </StackPane.margin>
+                        </Separator>
+                        
+                        <Separator prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="5.0" right="-150.0" top="255.0" />
+                           </StackPane.margin>
+                        </Separator>
+                        
+                        <Separator prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="5.0" right="-150.0" top="325.0" />
+                           </StackPane.margin>
+                        </Separator>
+                        
+                        <Separator layoutX="10.0" layoutY="380.0" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="5.0" right="-150.0" top="395.0" />
+                           </StackPane.margin>
+                        </Separator> 
+                        
+                        <Separator layoutX="10.0" layoutY="450.0" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="5.0" right="-150.0" top="465.0" />
+                           </StackPane.margin>
+                        </Separator>
+                        
+                        <Separator layoutX="10.0" layoutY="450.0" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="5.0" right="-150.0" top="535.0" />
+                           </StackPane.margin>
+                        </Separator>
+                        
+                        
+                        <Separator layoutX="10.0" layoutY="450.0" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="5.0" right="-150.0" top="605" />
+                           </StackPane.margin>
+                        </Separator>
+                        
+                        
+                        <Separator layoutX="10.0" layoutY="10.0" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="5.0" right="-150.0" top="675.0" />
+                           </StackPane.margin>
+                        </Separator>
+                        
+                        
+                        <Separator layoutX="15.0" layoutY="545.0" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="5.0" right="-150.0" top="745.0" />
+                           </StackPane.margin>
+                        </Separator>
+                        
+                        <Separator layoutX="10.0" layoutY="10.0" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets right="-150.0" top="815.0" />
+                           </StackPane.margin>
+                        </Separator>
+                        
+                        
+                        <Label fx:id="emp" layoutX="410.0" layoutY="75.0" text="Employee Names" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="250.0" top="25.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="labels" text="Changes made by:" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="150.0" top="10.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="labels" text="Registration Number" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="15.0" top="60.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label id="regNum" fx:id="regNum" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="65.0" top="95.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="labels" text="Customer Name" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="15.0" top="140.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label id="cusName" fx:id="cusName" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="65.0" top="165.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="labels" text="Area Name" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="15.0" top="210.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="area" text="Molyko" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="65.0" right="120.0" top="235.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="labels" text="Phone Number" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="15.0" top="280.0" />
+                           </StackPane.margin>
+                        </Label>
+                       
+                        <Label fx:id="phoneNum" layoutX="20.0" layoutY="30.0" text="67524" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="65.0" top="305.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="labels" layoutX="20.0" layoutY="30.0" text="Email" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="15.0" top="350.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="mail" layoutX="10.0" layoutY="10.0" text="john@gmail.com" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="65.0" right="5.0" top="375.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="labels" layoutX="10.0" layoutY="10.0" text="STB Type" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="15.0" top="420.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="stbT" layoutX="10.0" layoutY="10.0" text="DEN" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="65.0" top="445.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="labels" layoutX="10.0" layoutY="10.0" text="STB Code" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="15.0" top="490.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="stbC" layoutX="10.0" layoutY="10.0" text="SN765HT" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="65.0" top="515.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="labels" layoutX="10.0" layoutY="10.0" text="Serial Numeber" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="15.0" top="560.0" />
+                           </StackPane.margin>
+                        </Label>
+                       
+                        <Label fx:id="sNum" layoutX="10.0" layoutY="10.0" text="SN765HT" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="65.0" top="585.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="labels" layoutX="10.0" layoutY="10.0" text="MAC Address" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="15.0" top="630.0" />
+                           </StackPane.margin>
+                        </Label>
+                       
+                        <Label fx:id="mac" layoutX="10.0" layoutY="10.0" text="102.2155.144" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="65.0" top="655.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="labels" layoutX="25.0" layoutY="500.0" text="Date STB box Installed" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="15.0" top="700.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="iDate" layoutX="75.0" layoutY="525.0" text="05-02-2016" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="65.0" top="725.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="labels" layoutX="25.0" layoutY="570.0" text="Activation Date of STB Box" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="15.0" top="770.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Label fx:id="aDate" layoutX="75.0" layoutY="595.0" text="07-02-2016" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets top="795.0" />
+                           </StackPane.margin>
+                        </Label>
+                        
+                        <Button fx:id="okBtn" mnemonicParsing="false" text="OK" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="150.0" top="850.0" bottom ="20" />
+                           </StackPane.margin>
+                        </Button>
+                       <!--  <Button fx:id="editBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="EDIT" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="150.0" top="850.0" bottom ="20" />
+                           </StackPane.margin>
+                        </Button> -->
+                        
+                     </children>
+                     <VBox.margin>
+                        <Insets right="25.0" top="10.0" />
+                     </VBox.margin>
+                  </StackPane>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+   
+</BorderPane>

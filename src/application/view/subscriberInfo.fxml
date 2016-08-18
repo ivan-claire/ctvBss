@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+   <top>
+      <HBox fx:id="tophbox" prefHeight="42.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="37.0" prefWidth="646.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#DC143C" height="42.0" stroke="BLACK" strokeType="INSIDE" width="177.0" StackPane.alignment="TOP_LEFT" />
+                  <Text fx:id="tophboxtext" strokeType="OUTSIDE" strokeWidth="0.0" text="CableVision Television">
+                     <StackPane.margin>
+                        <Insets right="130.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="CVTV-BSS" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets left="55.0" top="11.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="tophboxtext" strokeType="OUTSIDE" strokeWidth="0.0" text="| Fin Year: 2015 - 2016">
+                     <StackPane.margin>
+                        <Insets left="110.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="tophboxtext" strokeType="OUTSIDE" strokeWidth="0.0" text="LoggedInUser:">
+                     <StackPane.margin>
+                        <Insets left="310.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="tophboxtext" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                     <StackPane.margin>
+                        <Insets left="450.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" text="Logout" StackPane.alignment="CENTER_RIGHT">
+                     
+                     <StackPane.margin>
+                        <Insets right="5.0" />
+                     </StackPane.margin>
+                  </Button>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox fx:id="leftvbox" prefHeight="371.0" prefWidth="176.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="371.0" prefWidth="170.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Separator fx:id="left_seperator" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                     <padding>
+                        <Insets top="360.0" />
+                     </padding>
+                  </Separator>
+              
+                  <Separator fx:id="left_seperator" prefHeight="371.0" prefWidth="170.0" StackPane.alignment="TOP_LEFT">
+                     <padding>
+                        <Insets left="5.0" right="5" top="410.0" />
+                     </padding>
+                  </Separator>
+                  <Separator fx:id="left_seperator" prefHeight="46.0" prefWidth="158.0" StackPane.alignment="TOP_CENTER">
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="260.0" />
+                     </padding>
+                  </Separator>
+                  <Separator fx:id="left_seperator" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="210.0" />
+                     </padding>
+                  </Separator>
+                  <Separator fx:id="left_seperator" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                     <padding>
+                        <Insets top="310.0" />
+                     </padding>
+                  </Separator>
+                  <ImageView fx:id="boximage" fitHeight="132.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+					   <!-- <image>
+					      <Image url= getClass().getResource("edit.JPG") />
+					   </image>  -->
+					 <StackPane.margin>
+                        <Insets bottom="14.0" left="20.0" right="8.0" top="20.0" />
+                     </StackPane.margin>
+                  </ImageView>
+                  <Button fx:id="dash" text="DashBoard" StackPane.alignment="TOP_CENTER">
+                     <StackPane.margin>
+                        <Insets top="225.0" />
+                     </StackPane.margin>
+                  </Button>
+                  <Button fx:id="subsInfo" text="Subscriber Information" StackPane.alignment="TOP_CENTER">
+                     <StackPane.margin>
+                        <Insets top="280.0" />
+                     </StackPane.margin>
+                  </Button>
+                   <Button fx:id="alloPackages" text="Allocated Packages" StackPane.alignment="TOP_CENTER">
+                     <StackPane.margin>
+                        <Insets top="330.0" />
+                     </StackPane.margin>
+                  </Button>
+                  <Button fx:id="packageSetup" text="Package Setup" StackPane.alignment="TOP_CENTER">
+                     <StackPane.margin>
+                        <Insets top="380.0" />
+                     </StackPane.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </StackPane>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="370.0" prefWidth="475.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                    </content>
+                  </ScrollPane>
+                  <Text fx:id="description" strokeType="OUTSIDE" strokeWidth="0.0" text="Subscriber Information" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets left="20.0" top="12.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="subdescription" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage your Customers accouns here" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets left="25.0" top="38.0" />
+                     </StackPane.margin>
+                  </Text>
+                  
+                  <Separator fx:id="middle_seperator" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets left="15.0" />
+                     </StackPane.margin>
+                     <padding>
+                        <Insets top="54.0" />
+                     </padding>
+                  </Separator>
+                  
+                  <Separator fx:id="middle_seperator" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                     <padding>
+                        <Insets top="100.0" />
+                     </padding>
+                     <StackPane.margin>
+                        <Insets left="15.0" />
+                     </StackPane.margin>
+                  </Separator>
+                  
+                  <VBox prefHeight="288.0" prefWidth="475.0" StackPane.alignment="CENTER">
+                     <StackPane.margin>
+                        <Insets left="5.0" right="5.0" top="110.0" />
+                     </StackPane.margin>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="       Customer List" wrappingWidth="463.193359375" VBox.vgrow="ALWAYS" />
+                        <HBox fillHeight="false" prefHeight="0.0" prefWidth="465.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <ComboBox prefHeight="23.0" prefWidth="59.0">
+                                 <HBox.margin>
+                                    <Insets left="35.0" top="5.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Records per page" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="7.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="240.0" top="7.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField prefHeight="25.0" prefWidth="128.0" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="50.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="240.0" left="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="info" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                        
+                           <VBox.margin>
+                              <Insets bottom="8.0" left="20.0" right="5.0" top="-500.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  
+                 <Button fx:id="addSubs" mnemonicParsing="false" text="Add Subscriber" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets left="25.0" top="65.0" />
+                     </StackPane.margin>
+                  </Button>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

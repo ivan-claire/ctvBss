@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditController">
+   <top>
+      <HBox fx:id="tophbox" prefHeight="42.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="37.0" prefWidth="646.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#DC143C" height="42.0" stroke="BLACK" strokeType="INSIDE" width="177.0" StackPane.alignment="TOP_LEFT" />
+                  <Text fx:id="tophboxtext" strokeType="OUTSIDE" strokeWidth="0.0" text="CableVision Television">
+                     <StackPane.margin>
+                        <Insets right="130.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="CVTV-BSS" StackPane.alignment="TOP_LEFT">
+                     <StackPane.margin>
+                        <Insets left="55.0" top="11.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="tophboxtext" strokeType="OUTSIDE" strokeWidth="0.0" text="| Fin Year: 2015 - 2016">
+                     <StackPane.margin>
+                        <Insets left="110.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="tophboxtext" strokeType="OUTSIDE" strokeWidth="0.0" text="LoggedInUser:">
+                     <StackPane.margin>
+                        <Insets left="310.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Text fx:id="tophboxtext" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                     <StackPane.margin>
+                        <Insets left="450.0" />
+                     </StackPane.margin>
+                  </Text>
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" text="Logout" StackPane.alignment="CENTER_RIGHT">
+                     <StackPane.margin>
+                        <Insets right="5.0" />
+                     </StackPane.margin>
+                  </Button>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </top>
+   <left>
+       <VBox fx:id="leftvbox" prefHeight="371.0" prefWidth="176.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="371.0" prefWidth="170.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Separator fx:id="left_seperator" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                     <padding>
+                        <Insets top="360.0" />
+                     </padding>
+                  </Separator>
+                  <Separator fx:id="left_seperator" prefHeight="371.0" prefWidth="170.0" StackPane.alignment="TOP_LEFT">
+                     <padding>
+                        <Insets left="5.0" right="5" top="410.0" />
+                     </padding>
+                  </Separator>
+                  <Separator fx:id="seperator" prefHeight="46.0" prefWidth="158.0" StackPane.alignment="TOP_CENTER">
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="260.0" />
+                     </padding>
+                  </Separator>
+                  <Separator fx:id="left_seperator" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                     <padding>
+                        <Insets left="5.0" right="5.0" top="210.0" />
+                     </padding>
+                  </Separator>
+                  <Separator fx:id="left_seperator" prefWidth="200.0" StackPane.alignment="TOP_LEFT">
+                     <padding>
+                        <Insets top="310.0" />
+                     </padding>
+                  </Separator>
+                  <ImageView fx:id="boximage" fitHeight="132.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+					   <!-- <image>
+					      <Image url= getClass().getResource("edit.JPG") />
+					   </image>  -->
+					 <StackPane.margin>
+                        <Insets bottom="14.0" left="20.0" right="8.0" top="20.0" />
+                     </StackPane.margin>
+                  </ImageView>
+                  <Button fx:id="dash" text="DashBoard" StackPane.alignment="TOP_CENTER">
+                     <StackPane.margin>
+                        <Insets top="225.0" />
+                     </StackPane.margin>
+                  </Button>
+                  <Button fx:id="subsInfo" text="Subscriber Information" StackPane.alignment="TOP_CENTER">
+                     <StackPane.margin>
+                        <Insets top="280.0" />
+                     </StackPane.margin>
+                  </Button>
+                   <Button fx:id="alloPackages" text="Allocated Packages" StackPane.alignment="TOP_CENTER">
+                     <StackPane.margin>
+                        <Insets top="330.0" />
+                     </StackPane.margin>
+                  </Button>
+                  <Button fx:id="packageSetup" text="Package Setup" StackPane.alignment="TOP_CENTER">
+                     <StackPane.margin>
+                        <Insets top="380.0" />
+                     </StackPane.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </StackPane>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <ScrollPane prefViewportHeight="365.0" prefViewportWidth="469.0">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+               <Text fx:id="errorMessage" fill="#bc0707" strokeType="OUTSIDE" strokeWidth="0.0" text="Error Message" StackPane.alignment="TOP_LEFT">
+                     <VBox.margin>
+                        <Insets left="500.0" top="4.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" style ="bold"/>
+                     </font>
+                        </Text>
+                  <Text fx:id="description" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Subscriber Information" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets left="20.0" top="6.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  
+                  <Separator halignment="RIGHT" prefWidth="1000.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets top="18.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <StackPane prefHeight="349.0" prefWidth="822.0" VBox.vgrow="ALWAYS">
+                     <opaqueInsets>
+                        <Insets top="8.0" />
+                     </opaqueInsets>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Number" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="290.0" top="50.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="290.0" top="80.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Area Name" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="290.0" top="113.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="290.0" top="144.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="290.0" top="174.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="STB Code" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="290.0" top="208.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="STB Type" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="290.0" top="240.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Serial Number" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="290.0" top="270.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        
+                        <TextField fx:id="regNumber" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="50.0" />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets bottom="4.0" right="250.0" top="4.0" />
+                           </padding>
+                        </TextField>
+                        <TextField fx:id="customerName" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="82.0" />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets bottom="4.0" top="4.0" />
+                           </padding>
+                        </TextField>
+                        <TextField fx:id="areaName" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="114.0" />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets bottom="4.0" top="4.0" />
+                           </padding>
+                        </TextField>
+                        <TextField fx:id="phoneNumber" layoutX="150.0" layoutY="110.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="146.0" />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets bottom="4.0" top="4.0" />
+                           </padding>
+                        </TextField>
+                        <TextField fx:id="email" layoutX="150.0" layoutY="142.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="178.0" />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets bottom="4.0" top="4.0" />
+                           </padding>
+                        </TextField>
+                        <TextField fx:id="stbCode" layoutX="10.0" layoutY="168.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="210.0" />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets bottom="4.0" top="4.0" />
+                           </padding>
+                        </TextField>
+                        <TextField fx:id="stbType" layoutX="10.0" layoutY="168.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="242.0" />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets bottom="4.0" top="4.0" />
+                           </padding>
+                        </TextField>
+                        <TextField fx:id="serialNumber" layoutX="150.0" layoutY="270.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="274.0" />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets bottom="4.0" top="4.0" />
+                           </padding>
+                        </TextField>
+                        <TextField fx:id="macAddress" layoutX="150.0" layoutY="270.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="306.0" />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets bottom="4.0" top="4.0" />
+                           </padding>
+                        </TextField>
+                        <DatePicker fx:id="installDate" layoutX="150.0" layoutY="270.0" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="338.0" />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets bottom="4.0" top="4.0" />
+                           </padding>
+                        </DatePicker>
+                        <Text layoutX="30.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAC Address" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="290.0" top="304.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Install Date" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="290.0" top="340.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="30.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Activated Date" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="290.0" top="376.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fill in the form below to add a new Subscriber or Edit Subscriber Information" StackPane.alignment="TOP_LEFT">
+                           <StackPane.margin>
+                              <Insets left="45.0" top="8.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="saveBtn" mnemonicParsing="false" text="Save Subscriber Information" StackPane.alignment="CENTER_RIGHT">
+                           <StackPane.margin>
+                              <Insets right="50.0" top="410.0" />
+                           </StackPane.margin>
+                        </Button>
+                        <Button fx:id="editBtn" mnemonicParsing="false" text="Edit Subscriber Information" StackPane.alignment="CENTER_RIGHT">
+                           <StackPane.margin>
+                              <Insets right="50.0" top="410.0" />
+                           </StackPane.margin>
+                        </Button>
+                        <TextField fx:id="stbType" layoutX="432.0" layoutY="270.0" StackPane.alignment="TOP_LEFT">
+                           <padding>
+                              <Insets bottom="4.0" top="4.0" />
+                           </padding>
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="242.0" />
+                           </StackPane.margin>
+                        </TextField>
+                        <DatePicker fx:id="activDate" layoutX="432.0" layoutY="316.0" StackPane.alignment="TOP_LEFT">
+                           <padding>
+                              <Insets bottom="4.0" top="4.0" />
+                           </padding>
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="374.0" />
+                           </StackPane.margin>
+                        </DatePicker>
+                        <TextField fx:id="regNumber" layoutX="432.0" layoutY="316.0" StackPane.alignment="TOP_LEFT">
+                           <padding>
+                              <Insets bottom="4.0" top="4.0" />
+                           </padding>
+                           <StackPane.margin>
+                              <Insets left="422.0" right="150.0" top="50.0" />
+                           </StackPane.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="25.0" top="8.0" />
+                     </VBox.margin>
+                  </StackPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
